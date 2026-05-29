@@ -1,2 +1,4 @@
 FROM nousresearch/hermes-agent:latest
-CMD ["sh", "-c", "while true; do sleep 3600; done"]
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+CMD ["/start.sh"]
